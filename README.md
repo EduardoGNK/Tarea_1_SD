@@ -99,3 +99,6 @@ Archivos JSON con resultados crudos:
 results_zipf_lru.json
 
 results_uniform_lfu.json
+
+Consideraciones:
+tuve un problema y es que al scrapear lo hice desde mi vscode y no desde mi docker por lo que hay códigos que no se usan pq los usé para pasarlos a mi docker, que igual me costó jdksjdkd
