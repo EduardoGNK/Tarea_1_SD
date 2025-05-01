@@ -55,7 +55,6 @@ docker-compose run --rm query python analyze_results.py
 ├── cache_query.py              # Simulador de políticas de caché
 ├── analyze_results.py          # Generador de visualizaciones
 ├── visualization_output/       # Gráficos generados (se crea automáticamente)
-└── requirements.txt            # Dependencias de Python
 🔍 Parámetros Configurables
 En cache_query.py:
 
