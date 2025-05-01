@@ -1,0 +1,7 @@
+distribution,cache_policy,hit_rate,avg_latency,hits,misses
+uniform,lfu,34.70%,1.98 ms,347,653
+uniform,lru,37.60%,1.89 ms,376,624
+uniform,simple,57.60%,1.39 ms,576,424
+zipf,lfu,88.60%,0.72 ms,886,114
+zipf,lru,88.10%,0.72 ms,881,119
+zipf,simple,88.20%,0.70 ms,882,118

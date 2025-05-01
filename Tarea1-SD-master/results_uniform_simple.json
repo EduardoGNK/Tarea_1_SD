@@ -1,0 +1,11 @@
+{
+  "distribution": "uniform",
+  "cache_policy": "simple",
+  "cache_size": 200,
+  "total_queries": 1000,
+  "hits": 576,
+  "misses": 424,
+  "hit_rate": 0.576,
+  "avg_latency": 0.0013877551555633546,
+  "timestamp": "2025-05-01T03:43:33.446640"
+}

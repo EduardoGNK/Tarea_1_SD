@@ -1,0 +1,68 @@
+[
+  {
+    "distribution": "uniform",
+    "cache_policy": "simple",
+    "cache_size": 200,
+    "total_queries": 1000,
+    "hits": 576,
+    "misses": 424,
+    "hit_rate": 0.576,
+    "avg_latency": 0.0013877551555633546,
+    "timestamp": "2025-05-01T03:43:33.446640"
+  },
+  {
+    "distribution": "uniform",
+    "cache_policy": "lru",
+    "cache_size": 200,
+    "total_queries": 1000,
+    "hits": 376,
+    "misses": 624,
+    "hit_rate": 0.376,
+    "avg_latency": 0.0018850920200347901,
+    "timestamp": "2025-05-01T03:43:46.522381"
+  },
+  {
+    "distribution": "uniform",
+    "cache_policy": "lfu",
+    "cache_size": 200,
+    "total_queries": 1000,
+    "hits": 347,
+    "misses": 653,
+    "hit_rate": 0.347,
+    "avg_latency": 0.0019787375926971435,
+    "timestamp": "2025-05-01T03:43:59.699098"
+  },
+  {
+    "distribution": "zipf",
+    "cache_policy": "simple",
+    "cache_size": 200,
+    "total_queries": 1000,
+    "hits": 882,
+    "misses": 118,
+    "hit_rate": 0.882,
+    "avg_latency": 0.0007002351284027099,
+    "timestamp": "2025-05-01T03:44:11.912836"
+  },
+  {
+    "distribution": "zipf",
+    "cache_policy": "lru",
+    "cache_size": 200,
+    "total_queries": 1000,
+    "hits": 881,
+    "misses": 119,
+    "hit_rate": 0.881,
+    "avg_latency": 0.0007183656692504883,
+    "timestamp": "2025-05-01T03:44:24.107147"
+  },
+  {
+    "distribution": "zipf",
+    "cache_policy": "lfu",
+    "cache_size": 200,
+    "total_queries": 1000,
+    "hits": 886,
+    "misses": 114,
+    "hit_rate": 0.886,
+    "avg_latency": 0.0007227113246917725,
+    "timestamp": "2025-05-01T03:44:36.303604"
+  }
+]

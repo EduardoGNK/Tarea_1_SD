@@ -1,0 +1,59 @@
+version: '3.9'
+
+services:
+  mongodb:
+    image: mongo:5.0
+    container_name: tarea1-sd-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_storage:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: waze_data
+    restart: unless-stopped
+
+  cache:
+    image: redis:7.0-alpine
+    container_name: tarea1-sd-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --maxmemory 100mb --maxmemory-policy allkeys-lru
+    restart: unless-stopped
+
+  data_collector:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tarea1-sd-scraper
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/
+      - DB_NAME=waze_data
+    depends_on:
+      - mongodb
+    volumes:
+      - ./scraper:/application/scraper
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
+  data_visualizer:
+    build:
+      context: .
+    container_name: tarea1-sd-query
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/
+      - REDIS_HOST=cache
+      - REDIS_PORT=6379
+      - DB_NAME=waze_data
+    depends_on:
+      - mongodb
+      - cache
+    volumes:
+      - .:/application
+    working_dir: /application
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
+volumes:
+  mongodb_storage:
